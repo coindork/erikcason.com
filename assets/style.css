@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background: #f9f8f4;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+nav {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: "Courier New", monospace;
+}
+
+nav a {
+  margin-right: 1.25rem;
+  text-decoration: none;
+  color: #111;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 640px;
+  padding: 4rem 2rem 6rem;
+}
+
+h1, h2, h3 {
+  font-family: "Courier New", monospace;
+  font-weight: normal;
+}
