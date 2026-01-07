@@ -57,3 +57,96 @@ h1, h2, h3 {
 .writing-list a:hover {
   border-bottom-color: #111;
 }
+/* ===============================
+   MANUSCRIPT MODE (ONE-SHOT)
+   =============================== */
+
+/* Page frame */
+body {
+  background: #f7f6f1;
+}
+
+/* Center the world */
+main {
+  position: relative;
+}
+
+/* Tree watermark */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/assets/images/tree.png");
+  background-repeat: no-repeat;
+  background-position: center 7rem;
+  background-size: 1100px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Title gravity */
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+/* Paragraph cadence */
+p {
+  margin-bottom: 1.6rem;
+}
+
+/* First paragraph = thesis */
+main > p:first-of-type {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* Horizontal rule = pause, not divider */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 4rem 0;
+  width: 40%;
+}
+
+/* Writing list feels archival */
+.writing-list {
+  margin-top: 4rem;
+}
+
+.writing-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.writing-list time {
+  min-width: 6rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.writing-list a {
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
+}
+
+.writing-list a:hover {
+  border-bottom-color: #111;
+}
+
+/* Nav quiet authority */
+nav {
+  background: transparent;
+}
+
+nav a {
+  opacity: 0.75;
+}
+
+nav a:hover {
+  opacity: 1;
+}
