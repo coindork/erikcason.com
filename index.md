@@ -1,4 +1,13 @@
 ---
+layout: default
+title: Erik Cason
+---
+
+I write in public as a way of thinking.
+
+This site is a personal philosophical terrain — a place for unfinished ideas, long-running inquiries, spoken work, and the occasional crystallization into essays, talks, or books.
+
+---
 title: Erik Cason
 ---
 
