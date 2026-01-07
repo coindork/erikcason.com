@@ -151,3 +151,18 @@ nav a {
 nav a:hover {
   opacity: 1;
 }
+/* ===============================
+   PAGE FIELD (CONTAINMENT)
+   =============================== */
+
+body {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
