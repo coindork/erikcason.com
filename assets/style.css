@@ -31,3 +31,29 @@ h1, h2, h3 {
   font-family: "Courier New", monospace;
   font-weight: normal;
 }
+/* ---------- Writing Page ---------- */
+
+.writing-list {
+  margin-top: 3rem;
+}
+
+.writing-list li {
+  list-style: none;
+  margin-bottom: 1.2rem;
+}
+
+.writing-list time {
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  color: #555;
+  margin-right: 0.75rem;
+}
+
+.writing-list a {
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.writing-list a:hover {
+  border-bottom-color: #111;
+}
