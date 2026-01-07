@@ -23,8 +23,9 @@ nav a:hover {
 }
 
 main {
-  max-width: 640px;
-  padding: 4rem 2rem 6rem;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem 6rem;
 }
 
 h1, h2, h3 {
