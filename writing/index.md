@@ -19,10 +19,10 @@ Everything here is allowed to exist.
 <ul class="writing-list">
   <li>
     <time>2026-01-08</time>
-    <a href="#">On trees, sovereignty, and quiet structure</a>
+    <a href="/writing/nyms-anons-knowns.html">
+  Nyms, Anons, and Knowns
+</a>
+
   </li>
-  <li>
-    <time>2026-01-07</time>
-    <a href="#">Notes on building a personal thinking space</a>
-  </li>
+  
 </ul>
