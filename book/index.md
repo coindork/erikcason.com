@@ -21,49 +21,25 @@
         </div>
 
         <div class="cs-cta">
-          <a class="cs-btn cs-primary"
-             href="https://www.amazon.com/Cryptosovereignty-Encrypted-Political-Philosophy-Bitcoin/dp/B0CFCW6JJR"
-             target="_blank" rel="noopener">
+          <a
+            class="cs-btn cs-primary"
+            href="https://www.amazon.com/Cryptosovereignty-Encrypted-Political-Philosophy-Bitcoin/dp/B0CFCW6JJR"
+            target="_blank"
+            rel="noopener"
+          >
             Buy on Amazon
           </a>
 
-          <a class="cs-btn cs-secondary"
-             href="https://store.bitcoinmagazine.com/products/cryptosovereignty"
-             target="_blank" rel="noopener">
+          <a
+            class="cs-btn cs-secondary"
+            href="https://store.bitcoinmagazine.com/products/cryptosovereignty"
+            target="_blank"
+            rel="noopener"
+          >
             Buy on Bitcoin Magazine
           </a>
         </div>
-<div class="cs-quotes">
-
-  <blockquote class="cs-quote">
-    <p>
-      Cryptosovereignty is a tour de force – a thought-provoking deep dive into the very
-      essence of why Bitcoin is poised to usher in a complete paradigm shift as we move
-      toward a future where solidarity and purpose reign supreme.
-    </p>
-    <footer>— Preston Pysh, host of <em>We Study Billionaires</em></footer>
-  </blockquote>
-
-  <blockquote class="cs-quote">
-    <p>
-      I consider Cason’s book one of the most important works since the publication of the
-      Cypherpunk Manifesto. Everyone who takes Bitcoin seriously should read it; those who
-      don’t should read it twice.
-    </p>
-    <footer>— Der Gigi, author of <em>21 Lessons</em></footer>
-  </blockquote>
-
-  <blockquote class="cs-quote">
-    <p>
-      I remember first stumbling across Erik Cason’s work in 2019 and thinking,
-      “How does nobody know about this guy?” I am so glad Erik Cason brought his writings
-      together into a single book, and I hope you too will be blown away reading
-      <em>Cryptosovereignty</em>.
-    </p>
-    <footer>— Aleksandar Svetski, author of <em>The Bushido of Bitcoin</em></footer>
-  </blockquote>
-
-</div>
+      </div>
 
       <aside class="cs-card cs-right">
         <img
@@ -103,6 +79,38 @@
           Builders, thinkers, and readers who want the deepest “why” behind Bitcoin.
         </p>
       </div>
+    </section>
+
+    <section class="cs-quotes">
+
+      <blockquote class="cs-quote">
+        <p>
+          Cryptosovereignty is a tour de force — a thought-provoking deep dive into the
+          very essence of why Bitcoin is poised to usher in a complete paradigm shift
+          as we move toward a future where solidarity and purpose reign supreme.
+        </p>
+        <footer>— Preston Pysh, host of <em>We Study Billionaires</em></footer>
+      </blockquote>
+
+      <blockquote class="cs-quote">
+        <p>
+          I consider Cason’s book one of the most important works since the publication
+          of the Cypherpunk Manifesto. Everyone who takes Bitcoin seriously should read it;
+          those who don’t should read it twice.
+        </p>
+        <footer>— Der Gigi, author of <em>21 Lessons</em></footer>
+      </blockquote>
+
+      <blockquote class="cs-quote">
+        <p>
+          I remember first stumbling across Erik Cason’s work in 2019 and thinking,
+          “How does nobody know about this guy?” I am so glad Erik Cason brought his
+          writings together into a single book, and I hope you too will be blown away
+          reading <em>Cryptosovereignty</em>.
+        </p>
+        <footer>— Aleksandar Svetski, author of <em>The Bushido of Bitcoin</em></footer>
+      </blockquote>
+
     </section>
 
   </div>
@@ -164,17 +172,7 @@
 
 .cs-primary{background:#ffffff;color:#000000 !important}
 .cs-secondary{background:transparent;color:#ffffff !important;border-color:rgba(255,255,255,.6)}
-
 .cs-btn:hover{opacity:.9;transform:translateY(-1px)}
-
-.cs-quote{
-  margin-top:20px;
-  padding:18px;
-  border:1px solid #1f1f22;
-  border-radius:14px;
-  color:#dddddd;
-  font-style:italic
-}
 
 .cs-right{display:flex;flex-direction:column;gap:16px}
 
@@ -205,4 +203,29 @@
   text-transform:uppercase
 }
 .cs-mini p{color:#b8b8b8;line-height:1.55;margin:0}
+
+.cs-quotes{margin-top:36px;display:grid;gap:20px}
+
+.cs-quote{
+  margin:0;
+  padding:20px 24px;
+  border-left:4px solid #ffffff;
+  background:rgba(255,255,255,.03);
+  border-radius:14px
+}
+
+.cs-quote p{
+  margin:0;
+  font-size:15px;
+  line-height:1.6;
+  color:#f0f0f0;
+  font-style:italic
+}
+
+.cs-quote footer{
+  margin-top:12px;
+  font-size:13px;
+  color:#b8b8b8;
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace
+}
 </style>
