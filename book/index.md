@@ -40,9 +40,7 @@
           </a>
         </div>
 
-        <!-- QUOTES NOW LIVE DIRECTLY UNDER BUY BUTTONS -->
         <section class="cs-quotes">
-
           <blockquote class="cs-quote">
             <p>
               Cryptosovereignty is a tour de force — a thought-provoking deep dive into the
@@ -70,7 +68,6 @@
             </p>
             <footer>— Aleksandar Svetski, author of <em>The Bushido of Bitcoin</em></footer>
           </blockquote>
-
         </section>
       </div>
 
@@ -86,6 +83,29 @@
           <div><strong>Publisher:</strong> Bitcoin Magazine Books</div>
           <div><strong>Format:</strong> Print + Digital</div>
           <div><strong>Thesis:</strong> Sovereignty is a protocol — not permission.</div>
+
+          <div class="cs-audio">
+            <div class="cs-audio-title">Listen: What Is Money? (WiM122)</div>
+
+            <div class="cs-embed">
+              <iframe
+                src="https://www.youtube.com/embed/VQXz5a85nzc"
+                title="Bitcoin, Truth, and Power with Erik Cason (WiM122) — What Is Money?"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <a
+              class="cs-audio-link"
+              href="https://whatismoneypodcast.com/episodes/bitcoin-truth-and-power-with-erik-cason-wim122"
+              target="_blank"
+              rel="noopener"
+            >
+              Open episode page →
+            </a>
+          </div>
         </div>
       </aside>
     </section>
@@ -229,4 +249,11 @@
   color:#b8b8b8;
   font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace
 }
+
+/* Embedded audio/video widget */
+.cs-audio{margin-top:16px;padding-top:14px;border-top:1px solid #1f1f22}
+.cs-audio-title{color:#f6f6f6;font-weight:800;margin-bottom:10px}
+.cs-embed{position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.cs-embed iframe{position:absolute;inset:0;width:100%;height:100%}
+.cs-audio-link{display:inline-block;margin-top:10px;color:#f6f6f6;text-decoration:underline;text-underline-offset:3px}
 </style>
