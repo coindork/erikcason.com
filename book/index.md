@@ -35,7 +35,7 @@
         </div>
 
         <div class="cs-quote">
-          <p>“Not just a book about money — a book about the re-emergence of personal power.”</p>
+          “Not just a book about money — a book about the re-emergence of personal power.”
         </div>
       </div>
 
@@ -47,10 +47,10 @@
         />
 
         <div class="cs-meta">
-          <div><b>Author:</b> Erik Cason</div>
-          <div><b>Publisher:</b> Bitcoin Magazine Books</div>
-          <div><b>Format:</b> Print + Digital</div>
-          <div><b>Thesis:</b> Sovereignty is a protocol — not permission.</div>
+          <div><strong>Author:</strong> Erik Cason</div>
+          <div><strong>Publisher:</strong> Bitcoin Magazine Books</div>
+          <div><strong>Format:</strong> Print + Digital</div>
+          <div><strong>Thesis:</strong> Sovereignty is a protocol — not permission.</div>
         </div>
       </aside>
     </section>
@@ -84,30 +84,99 @@
 
 <style>
 .cs-page{
-  --bg:#0b0b0c;--fg:#f6f6f6;--muted:#b8b8b8;--line:#1f1f22;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;
-  color:var(--fg);
+  background:#0b0b0c;
+  border-radius:24px;
+  padding:24px 0;
+  color:#f6f6f6;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
+
 .cs-wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
-.cs-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+
+.cs-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
 @media(max-width:900px){.cs-hero{grid-template-columns:1fr}}
-.cs-card{border:1px solid var(--line);border-radius:18px;padding:24px;background:rgba(255,255,255,.03)}
-.cs-kicker{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:10px}
-.cs-left h1{font-family:var(--mono);font-size:clamp(28px,4vw,46px);margin:0 0 12px}
-.cs-sub{color:var(--muted);max-width:65ch;line-height:1.6}
-.cs-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-.cs-chip{font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
-.cs-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-.cs-btn{font-family:var(--mono);padding:12px 16px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.2)}
-.cs-primary{background:#fff;color:#000}
-.cs-secondary{color:#fff}
-.cs-quote{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px;color:#ddd}
-.cs-right{display:flex;flex-direction:column;gap:14px}
-.cs-cover{width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.15)}
-.cs-meta{font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:12px;padding:14px;color:#ccc}
-.cs-grid{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+.cs-card{border:1px solid #1f1f22;border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
+
+.cs-kicker{
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:12px;
+  color:#b8b8b8;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:12px
+}
+
+.cs-left h1{
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:clamp(30px,4vw,46px);
+  margin:0 0 14px
+}
+
+.cs-sub{color:#b8b8b8;max-width:65ch;line-height:1.6}
+
+.cs-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.cs-chip{
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid #1f1f22
+}
+
+.cs-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+
+.cs-btn{
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
+  padding:12px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid rgba(255,255,255,.35);
+  display:inline-block
+}
+
+.cs-primary{background:#ffffff;color:#000000 !important}
+.cs-secondary{background:transparent;color:#ffffff !important;border-color:rgba(255,255,255,.6)}
+
+.cs-btn:hover{opacity:.9;transform:translateY(-1px)}
+
+.cs-quote{
+  margin-top:20px;
+  padding:18px;
+  border:1px solid #1f1f22;
+  border-radius:14px;
+  color:#dddddd;
+  font-style:italic
+}
+
+.cs-right{display:flex;flex-direction:column;gap:16px}
+
+.cs-cover{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.15)
+}
+
+.cs-meta{
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:12px;
+  border:1px solid #1f1f22;
+  border-radius:14px;
+  padding:16px;
+  color:#cccccc
+}
+
+.cs-grid{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media(max-width:900px){.cs-grid{grid-template-columns:1fr}}
-.cs-mini{border:1px solid var(--line);border-radius:16px;padding:16px}
-.cs-mini h3{font-family:var(--mono);font-size:13px;margin:0 0 8px;text-transform:uppercase}
-.cs-mini p{color:var(--muted);line-height:1.55;margin:0}
+
+.cs-mini{border:1px solid #1f1f22;border-radius:18px;padding:18px}
+.cs-mini h3{
+  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:13px;
+  margin:0 0 10px;
+  text-transform:uppercase
+}
+.cs-mini p{color:#b8b8b8;line-height:1.55;margin:0}
 </style>
