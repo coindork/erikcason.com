@@ -39,6 +39,39 @@
             Buy on Bitcoin Magazine
           </a>
         </div>
+
+        <!-- QUOTES NOW LIVE DIRECTLY UNDER BUY BUTTONS -->
+        <section class="cs-quotes">
+
+          <blockquote class="cs-quote">
+            <p>
+              Cryptosovereignty is a tour de force — a thought-provoking deep dive into the
+              very essence of why Bitcoin is poised to usher in a complete paradigm shift
+              as we move toward a future where solidarity and purpose reign supreme.
+            </p>
+            <footer>— Preston Pysh, host of <em>We Study Billionaires</em></footer>
+          </blockquote>
+
+          <blockquote class="cs-quote">
+            <p>
+              I consider Cason’s book one of the most important works since the publication
+              of the Cypherpunk Manifesto. Everyone who takes Bitcoin seriously should read it;
+              those who don’t should read it twice.
+            </p>
+            <footer>— Der Gigi, author of <em>21 Lessons</em></footer>
+          </blockquote>
+
+          <blockquote class="cs-quote">
+            <p>
+              I remember first stumbling across Erik Cason’s work in 2019 and thinking,
+              “How does nobody know about this guy?” I am so glad Erik Cason brought his
+              writings together into a single book, and I hope you too will be blown away
+              reading <em>Cryptosovereignty</em>.
+            </p>
+            <footer>— Aleksandar Svetski, author of <em>The Bushido of Bitcoin</em></footer>
+          </blockquote>
+
+        </section>
       </div>
 
       <aside class="cs-card cs-right">
@@ -78,154 +111,4 @@
         <p>
           Builders, thinkers, and readers who want the deepest “why” behind Bitcoin.
         </p>
-      </div>
-    </section>
-
-    <section class="cs-quotes">
-
-      <blockquote class="cs-quote">
-        <p>
-          Cryptosovereignty is a tour de force — a thought-provoking deep dive into the
-          very essence of why Bitcoin is poised to usher in a complete paradigm shift
-          as we move toward a future where solidarity and purpose reign supreme.
-        </p>
-        <footer>— Preston Pysh, host of <em>We Study Billionaires</em></footer>
-      </blockquote>
-
-      <blockquote class="cs-quote">
-        <p>
-          I consider Cason’s book one of the most important works since the publication
-          of the Cypherpunk Manifesto. Everyone who takes Bitcoin seriously should read it;
-          those who don’t should read it twice.
-        </p>
-        <footer>— Der Gigi, author of <em>21 Lessons</em></footer>
-      </blockquote>
-
-      <blockquote class="cs-quote">
-        <p>
-          I remember first stumbling across Erik Cason’s work in 2019 and thinking,
-          “How does nobody know about this guy?” I am so glad Erik Cason brought his
-          writings together into a single book, and I hope you too will be blown away
-          reading <em>Cryptosovereignty</em>.
-        </p>
-        <footer>— Aleksandar Svetski, author of <em>The Bushido of Bitcoin</em></footer>
-      </blockquote>
-
-    </section>
-
-  </div>
-</div>
-
-<style>
-.cs-page{
-  background:#0b0b0c;
-  border-radius:24px;
-  padding:24px 0;
-  color:#f6f6f6;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-
-.cs-wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
-
-.cs-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
-@media(max-width:900px){.cs-hero{grid-template-columns:1fr}}
-
-.cs-card{border:1px solid #1f1f22;border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
-
-.cs-kicker{
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
-  font-size:12px;
-  color:#b8b8b8;
-  letter-spacing:1.4px;
-  text-transform:uppercase;
-  margin-bottom:12px
-}
-
-.cs-left h1{
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
-  font-size:clamp(30px,4vw,46px);
-  margin:0 0 14px
-}
-
-.cs-sub{color:#b8b8b8;max-width:65ch;line-height:1.6}
-
-.cs-chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
-.cs-chip{
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid #1f1f22
-}
-
-.cs-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
-
-.cs-btn{
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
-  padding:12px 18px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:700;
-  border:1px solid rgba(255,255,255,.35);
-  display:inline-block
-}
-
-.cs-primary{background:#ffffff;color:#000000 !important}
-.cs-secondary{background:transparent;color:#ffffff !important;border-color:rgba(255,255,255,.6)}
-.cs-btn:hover{opacity:.9;transform:translateY(-1px)}
-
-.cs-right{display:flex;flex-direction:column;gap:16px}
-
-.cs-cover{
-  width:100%;
-  height:auto;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.15)
-}
-
-.cs-meta{
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
-  font-size:12px;
-  border:1px solid #1f1f22;
-  border-radius:14px;
-  padding:16px;
-  color:#cccccc
-}
-
-.cs-grid{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:900px){.cs-grid{grid-template-columns:1fr}}
-
-.cs-mini{border:1px solid #1f1f22;border-radius:18px;padding:18px}
-.cs-mini h3{
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace;
-  font-size:13px;
-  margin:0 0 10px;
-  text-transform:uppercase
-}
-.cs-mini p{color:#b8b8b8;line-height:1.55;margin:0}
-
-.cs-quotes{margin-top:36px;display:grid;gap:20px}
-
-.cs-quote{
-  margin:0;
-  padding:20px 24px;
-  border-left:4px solid #ffffff;
-  background:rgba(255,255,255,.03);
-  border-radius:14px
-}
-
-.cs-quote p{
-  margin:0;
-  font-size:15px;
-  line-height:1.6;
-  color:#f0f0f0;
-  font-style:italic
-}
-
-.cs-quote footer{
-  margin-top:12px;
-  font-size:13px;
-  color:#b8b8b8;
-  font-family:ui-monospace,Menlo,Monaco,Consolas,"Courier New",monospace
-}
-</style>
+      </
