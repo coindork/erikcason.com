@@ -33,27 +33,37 @@
             Buy on Bitcoin Magazine
           </a>
         </div>
+<div class="cs-quotes">
 
-        <div class="cs-quote">
-          “Cryptosovereignty is a tour de force – a thought-provoking deep dive into the very essence of why Bitcoin is poised to usher in a complete paradigm shift as we move toward a future where solidarity and purpose reign supreme.
-— Preston Pysh, host of the #1 ranked investing podcast on iTunes, We Study Billionaires
+  <blockquote class="cs-quote">
+    <p>
+      Cryptosovereignty is a tour de force – a thought-provoking deep dive into the very
+      essence of why Bitcoin is poised to usher in a complete paradigm shift as we move
+      toward a future where solidarity and purpose reign supreme.
+    </p>
+    <footer>— Preston Pysh, host of <em>We Study Billionaires</em></footer>
+  </blockquote>
 
-Cason’s extraordinary work offers us a way out of nihilism and authoritarianism and posits a future where both technology and spirit work together to sustain a just society and liberated humanity.
-— Jesse Posner, Senior Blockchain Engineer at Block
+  <blockquote class="cs-quote">
+    <p>
+      I consider Cason’s book one of the most important works since the publication of the
+      Cypherpunk Manifesto. Everyone who takes Bitcoin seriously should read it; those who
+      don’t should read it twice.
+    </p>
+    <footer>— Der Gigi, author of <em>21 Lessons</em></footer>
+  </blockquote>
 
-It’s hard to think of a greater gift Cason could give the world than to help people understand Bitcoin better – a feat he accomplishes with resounding success in this book.
-— John Vallis, Host of The Rapid-Fire Bitcoin Podcast
+  <blockquote class="cs-quote">
+    <p>
+      I remember first stumbling across Erik Cason’s work in 2019 and thinking,
+      “How does nobody know about this guy?” I am so glad Erik Cason brought his writings
+      together into a single book, and I hope you too will be blown away reading
+      <em>Cryptosovereignty</em>.
+    </p>
+    <footer>— Aleksandar Svetski, author of <em>The Bushido of Bitcoin</em></footer>
+  </blockquote>
 
-What Bitcoin truly represents and what Satoshi accomplished through its creation are explored here fearlessly and candidly, yet with such honest and precise terminology that it becomes impossible to evade the historic significance Bitcoin is about to exact on every aspect of human existence.
-— Tomer Strolight, Editor-in-Chief at Swan Bitcoin and author of Why Bitcoin
-
-I consider Cason’s book one of the most important works since the publication of the Cypherpunk Manifesto. Everyone who takes Bitcoin seriously should read it; those who don’t should read it twice.
-— Der Gigi, Author of 21 Lessons
-
-I remember first stumbling across Erik Cason’s work in 2019 and thinking, “How does nobody know about this guy?” I am so glad Erik Cason brought his writings together into a single book, and I hope you too will be blown away reading Cryptosovereignty.
-— Aleksandar Svetski, Author of TheUnCommunist Manifesto and The Bushido of Bitcoin”
-        </div>
-      </div>
+</div>
 
       <aside class="cs-card cs-right">
         <img
