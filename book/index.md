@@ -331,9 +331,12 @@ Sources for links:
       </div>
 
       <aside class="card hero-right">
-        <div class="cover" aria-label="Book cover placeholder">
-          <div class="cover-title">[ add cover image here ]</div>
-        </div>
+        <img
+  src="/assets/cryptosovereignty-cover.jpg"
+  alt="CryptoSovereignty book cover by Erik Cason"
+  style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.12);"
+/>
+
 
         <div class="meta">
           <div><b>Author:</b> Erik Cason</div>
