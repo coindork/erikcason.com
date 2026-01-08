@@ -2,10 +2,13 @@
 layout: default
 title: Erik Cason
 ---
+Hi, I'm Erik Cason. 
 
 I write in public as a way of thinking.
 
 This site is a personal philosophical terrain — a place for unfinished ideas, long-running inquiries, spoken work, and the occasional crystallization into essays, talks, or books.
+
+My big shtick is that...
 
 # Bitcoin is the first non-violent exit from state power.
 
