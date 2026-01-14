@@ -8,7 +8,7 @@
   class="about-photo"
 />
 
-This is a personal thinking space.
+This is a personal thinking space first and foremost--I'll say what I want.
   <p>
     Erik Cason is a philosopher, entrepreneur, and systems thinker working at the
     intersection of cryptography, political philosophy, and economic coordination.
