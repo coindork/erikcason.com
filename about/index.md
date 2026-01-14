@@ -1,12 +1,6 @@
 <section class="about-page">
 
   <h1>About</h1>
----
-layout: default
-title: About
----
-
-# About
 
 <img
   src="/assets/owl-cason.png"
