@@ -1,7 +1,20 @@
 <section class="about-page">
 
   <h1>About</h1>
+---
+layout: default
+title: About
+---
 
+# About
+
+<img
+  src="/assets/owl-cason.png"
+  alt="Erik Cason"
+  class="about-photo"
+/>
+
+This is a personal thinking space.
   <p>
     Erik Cason is a philosopher, entrepreneur, and systems thinker working at the
     intersection of cryptography, political philosophy, and economic coordination.
