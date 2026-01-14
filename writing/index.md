@@ -22,7 +22,12 @@ Everything here is allowed to exist.
     <a href="/writing/nyms-anons-knowns.html">
   Nyms, Anons, and Knowns
 </a>
-
+<li>
+  <time>2026-01-09</time>
+  <a href="/writing/stateless-money-to-stateless-society">
+    Stateless Money to Stateless Society
+  </a>
+</li>
   </li>
   
 </ul>
