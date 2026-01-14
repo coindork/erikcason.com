@@ -174,7 +174,7 @@ body {
    =============================== */
 
 .about-photo {
-  float: left;
+  float: left; !important;
   width: 160px;
   height: auto;
   margin: 0.25rem 1.5rem 1.25rem 0;
@@ -189,5 +189,4 @@ body {
     margin: 1.5rem auto;
     display: block;
   }
-}
 }
