@@ -18,6 +18,12 @@ Everything here is allowed to exist.
 
 <ul class="writing-list">
   <li>
+    <time>2026-03-25</time>
+    <a href="/writing/declaration-of-independence-of-cyberintelligence">
+      The Declaration of Independence of Cyberintelligence
+    </a>
+  </li>
+  <li>
     <time>2026-01-08</time>
     <a href="/writing/nyms-anons-knowns.html">
   Nyms, Anons, and Knowns
