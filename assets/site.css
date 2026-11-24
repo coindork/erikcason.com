@@ -788,3 +788,7 @@ nav a[aria-current='page'] { color: var(--ember); }
 .opening-grid + .home-antiwar { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .home-antiwar { max-width: 54rem; }
 .live-words .home-vora { display: flow-root; }
+
+/* 2026-11-23: four press cards sit two by two on the News page */
+.press-features:has(> .press-card:nth-child(4)) { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 760px) { .press-features:has(> .press-card:nth-child(4)) { grid-template-columns: 1fr; } }
