@@ -1,0 +1,1903 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=EB+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap');
+
+:root {
+  --paper: #efe6d2;
+  --paper-dark: #e5d8bc;
+  --ink: #2a2118;
+  --sepia: #6b5638;
+  --rule: #a8916a;
+  --ember: #d96a57;
+  --measure: 1180px;
+  --reading: 680px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: .045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.72'/%3E%3C/svg%3E");
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: -4rem;
+  left: 50%;
+  width: 19rem;
+  height: 10rem;
+  transform: translateX(-50%);
+  background: rgba(255, 252, 241, .28);
+  filter: blur(44px);
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--ember);
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: var(--paper);
+  background: var(--ember);
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote,
+dl {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(3.25rem, 8vw, 5.8rem);
+  letter-spacing: -.025em;
+  margin-bottom: 1.3rem;
+}
+
+h2 {
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  letter-spacing: -.02em;
+}
+
+h3 {
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  z-index: 3;
+  padding: .5rem .75rem;
+  color: var(--paper);
+  background: var(--ink);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.page-frame {
+  width: min(calc(100% - 3rem), var(--measure));
+  margin: 2rem auto;
+  border: 1px solid var(--rule);
+  outline: 4px double rgba(107, 86, 56, .7);
+  outline-offset: 6px;
+  background: rgba(239, 230, 210, .78);
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.45rem clamp(1.1rem, 4vw, 3.2rem) 1.15rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark,
+nav a,
+.kicker,
+.catalogue-kind,
+.footer-motto,
+.footer-links,
+.button,
+.text-link,
+.link-status,
+dt,
+.nav-now {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+}
+
+.wordmark {
+  font-size: .92rem;
+  letter-spacing: .16em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .35rem 1.15rem;
+}
+
+nav a,
+.nav-now {
+  font-size: .76rem;
+  text-decoration: none;
+}
+
+.nav-now {
+  color: var(--ember);
+  margin-left: .2rem;
+}
+
+.site-main {
+  padding: clamp(3.4rem, 7vw, 6.5rem) clamp(1.1rem, 6vw, 5.3rem) 6rem;
+}
+
+.site-main.narrow {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.site-footer {
+  padding: 3.25rem clamp(1.1rem, 4vw, 3.2rem) 2.7rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.key-glyph {
+  color: var(--ember);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.footer-motto {
+  color: var(--sepia);
+  font-size: .72rem;
+  margin: .85rem 0 1rem;
+}
+
+.footer-motto span {
+  color: var(--ember);
+  padding: 0 .45rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .8rem 1.25rem;
+  margin: 0;
+  font-size: .68rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.kicker,
+.catalogue-kind {
+  color: var(--sepia);
+  font-size: .72rem;
+  letter-spacing: .11em;
+  margin-bottom: .55rem;
+}
+
+.section-head {
+  max-width: 45rem;
+  margin-bottom: 2.1rem;
+}
+
+.section-head h2 {
+  margin-bottom: .45rem;
+}
+
+.section-intro,
+.lede {
+  max-width: 48ch;
+  color: var(--sepia);
+  font-size: 1.16rem;
+}
+
+.page-intro {
+  max-width: 55rem;
+  margin-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.page-intro h1 {
+  max-width: 12ch;
+  margin-bottom: 1rem;
+}
+
+.page-intro .kicker {
+  color: var(--ember);
+}
+
+.opening {
+  max-width: 48rem;
+}
+
+.opening h1 {
+  max-width: 12ch;
+}
+
+.opening-lede {
+  max-width: 26ch;
+  margin-bottom: 2.4rem;
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.live-words {
+  max-width: 43rem;
+}
+
+.live-words p {
+  margin-bottom: 1.35rem;
+}
+
+.live-words .thesis {
+  margin: 1.6rem 0;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.9rem, 4.2vw, 3.15rem);
+  line-height: 1.1;
+}
+
+.reading-room,
+.home-domains,
+.home-plate,
+.writing-preview,
+.follow-block {
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
+.reading-room-grid {
+  display: grid;
+  grid-template-columns: 1.4fr .85fr;
+  gap: 1.4rem;
+}
+
+.feature-volume,
+.reading-note,
+.now-strip {
+  padding: 1.45rem 1.55rem;
+  border: 1px solid var(--rule);
+}
+
+.feature-volume {
+  background: rgba(229, 216, 188, .45);
+}
+
+.feature-volume h3,
+.reading-note h3 {
+  margin-bottom: .65rem;
+}
+
+.feature-volume p,
+.reading-note p {
+  max-width: 48ch;
+}
+
+.text-link {
+  display: inline-block;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-decoration: none;
+}
+
+.text-link::after {
+  content: ' ↗';
+  color: var(--ember);
+}
+
+.now-strip {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: rgba(229, 216, 188, .22);
+}
+
+.now-strip p {
+  margin: 0;
+}
+
+.now-strip a {
+  text-decoration: none;
+}
+
+.domain-question-list {
+  border-top: 1px solid var(--rule);
+}
+
+.domain-question {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px dotted var(--rule);
+  text-decoration: none;
+}
+
+.domain-question .roman-large,
+.roman-large {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  font-style: italic;
+  line-height: 1;
+}
+
+.domain-question strong,
+.domain-question small {
+  display: block;
+}
+
+.domain-question strong {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  font-weight: 400;
+}
+
+.domain-question small {
+  max-width: 55ch;
+  color: var(--sepia);
+}
+
+.domain-index-row {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px dotted var(--rule);
+  text-decoration: none;
+}
+
+.domain-index-row strong,
+.domain-index-row small {
+  display: block;
+}
+
+.domain-index-row strong {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 400;
+}
+
+.domain-index-row small {
+  max-width: 54ch;
+  color: var(--sepia);
+}
+
+.home-plate {
+  max-width: 28rem;
+}
+
+.image-mat {
+  margin: 0;
+  padding: 8px;
+  background: var(--paper-dark);
+  box-shadow: 0 0 0 1px var(--rule), 0 0 0 8px var(--paper-dark), 0 0 0 9px var(--rule);
+}
+
+.image-mat img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: sepia(.34) contrast(.96);
+}
+
+.plate-caption {
+  margin-top: 1.25rem;
+}
+
+.plate-caption span,
+.plate-caption em {
+  display: block;
+}
+
+.plate-caption span {
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: lowercase;
+}
+
+.plate-caption em {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.writing-rows,
+.published-index,
+.domain-index-list,
+.shelf-list,
+.now-list,
+.catalogue-list {
+  border-top: 1px solid var(--rule);
+}
+
+.writing-row {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px dotted var(--rule);
+  text-decoration: none;
+}
+
+.writing-row strong,
+.writing-row small {
+  display: block;
+}
+
+.writing-row strong {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.95rem);
+  font-weight: 400;
+}
+
+.writing-row small {
+  color: var(--sepia);
+  font-size: 1.02rem;
+}
+
+.date {
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .75rem;
+  letter-spacing: .04em;
+}
+
+.date::before {
+  content: '· ';
+  color: var(--ember);
+}
+
+.excerpt-shelf {
+  margin-top: clamp(5.5rem, 10vw, 8rem);
+}
+
+.excerpt-card {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 1.2rem;
+  padding: 1.9rem 0;
+  border-top: 1px dotted var(--rule);
+}
+
+.excerpt-index {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-style: italic;
+  line-height: 1;
+}
+
+.excerpt-content h3 {
+  margin-bottom: .45rem;
+}
+
+.excerpt-description {
+  max-width: 55ch;
+  color: var(--sepia);
+  margin-bottom: 1.25rem;
+}
+
+.essay-excerpt {
+  max-width: 64ch;
+  margin: 0 0 1.1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: 1.04rem;
+}
+
+.essay-excerpt p {
+  margin: 0;
+}
+
+.published-index {
+  display: grid;
+  gap: 0;
+}
+
+.published-link {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px dotted var(--rule);
+  text-decoration: none;
+}
+
+.published-link strong {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.35rem, 2.8vw, 2.15rem);
+  font-weight: 400;
+}
+
+.published-link small {
+  color: var(--sepia);
+}
+
+.longform-body {
+  max-width: var(--reading);
+  margin: 0 auto;
+  font-size: 1.08rem;
+}
+
+.longform-body p {
+  margin-bottom: 1.45rem;
+}
+
+.longform-body h3 {
+  margin: 3.1rem 0 1.1rem;
+  color: var(--ember);
+  font-size: 1.7rem;
+}
+
+.longform-body hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.8rem 0;
+}
+
+.essay-title-block {
+  max-width: var(--reading);
+  margin: 0 auto 3.4rem;
+}
+
+.essay-title-block h1 {
+  margin-bottom: .6rem;
+}
+
+.essay-subtitle {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 1.28rem;
+  font-style: italic;
+}
+
+.domain-origin {
+  max-width: 48ch;
+  color: var(--sepia);
+  font-size: 1.15rem;
+}
+
+.shelf-note {
+  max-width: 60rem;
+  margin-bottom: clamp(4rem, 9vw, 7rem);
+  padding: 1.35rem 1.55rem;
+  border: 1px solid var(--rule);
+  background: rgba(229, 216, 188, .4);
+}
+
+.shelf-note p:last-child {
+  margin-bottom: 0;
+}
+
+.shelf-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4rem;
+  align-items: start;
+  gap: 2rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.shelf-entry h3 {
+  margin: 0 0 .35rem;
+}
+
+.shelf-entry h3 a {
+  text-decoration: none;
+}
+
+.shelf-entry p:last-child {
+  max-width: 60ch;
+  color: var(--sepia);
+  margin-bottom: 0;
+}
+
+.shelf-mark {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.back-link {
+  margin-top: 3rem;
+}
+
+.now-item {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1.4rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.now-mark {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 2rem;
+}
+
+.now-item h2 {
+  margin-bottom: .45rem;
+}
+
+.now-item p:last-child {
+  color: var(--sepia);
+}
+
+.about-content {
+  max-width: 52rem;
+  font-size: 1.1rem;
+}
+
+.about-plate {
+  width: min(16rem, 70%);
+  margin: 0 0 2.8rem;
+}
+
+.about-content hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 3rem 0;
+}
+
+.about-content h2 {
+  margin-top: 3rem;
+  font-size: 2.1rem;
+}
+
+.bio-note {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-style: italic;
+}
+
+.draft-flag {
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: lowercase;
+}
+
+.follow-block {
+  max-width: 52rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--rule);
+}
+
+.follow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.follow-grid p {
+  margin-bottom: 0;
+}
+
+.follow-grid strong,
+.follow-grid span {
+  display: block;
+}
+
+.follow-grid strong {
+  margin-bottom: .25rem;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+}
+
+.follow-grid span {
+  color: var(--sepia);
+}
+
+.book-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.book-hero-copy {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--rule);
+  background: rgba(229, 216, 188, .34);
+}
+
+.book-hero-copy h1 {
+  max-width: 10ch;
+}
+
+.book-hero-copy h1 em {
+  display: block;
+  color: var(--ember);
+  font-size: .62em;
+  line-height: 1.15;
+  margin-top: .18em;
+}
+
+.book-lede {
+  max-width: 38ch;
+  font-size: 1.24rem;
+}
+
+.book-hero-image {
+  min-height: 100%;
+}
+
+.book-hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 26rem;
+  object-fit: cover;
+}
+
+.motto {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  max-width: 34rem;
+  margin: 2rem 0;
+  color: var(--sepia);
+  text-align: center;
+}
+
+.motto span {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+}
+
+.button {
+  display: inline-block;
+  padding: .65rem 1rem .58rem;
+  border: 1px solid var(--ink);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-decoration: none;
+}
+
+.button-solid {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.button-solid:hover,
+.button-solid:focus-visible,
+.button-outline:hover,
+.button-outline:focus-visible {
+  color: var(--paper);
+  background: var(--ember);
+  border-color: var(--ember);
+}
+
+.book-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.5rem 0;
+}
+
+.book-chip {
+  padding: .28rem .52rem;
+  border: 1px solid var(--rule);
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .69rem;
+  letter-spacing: .06em;
+}
+
+.book-quotes {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+.book-quote {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--rule);
+}
+
+.book-quote p {
+  margin-bottom: .45rem;
+  font-size: 1.03rem;
+  font-style: italic;
+}
+
+.book-quote footer {
+  color: var(--sepia);
+  font-size: .94rem;
+}
+
+.book-side {
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+}
+
+.book-cover {
+  border: 1px solid var(--rule);
+}
+
+.book-meta {
+  margin: 1.35rem 0 0;
+  color: var(--sepia);
+  font-size: 1rem;
+}
+
+.book-meta p {
+  margin-bottom: .4rem;
+}
+
+.book-meta strong {
+  color: var(--ink);
+}
+
+.book-audio {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.book-audio-title {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .75rem;
+  letter-spacing: .06em;
+  text-transform: lowercase;
+}
+
+.book-embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin-top: .7rem;
+  border: 1px solid var(--rule);
+}
+
+.book-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.book-audio-link {
+  display: inline-block;
+  margin-top: .7rem;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .72rem;
+  letter-spacing: .06em;
+}
+
+.book-triad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  margin-top: 3rem;
+}
+
+.book-mini {
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.book-mini h3 {
+  margin-bottom: .4rem;
+  font-size: 1.55rem;
+}
+
+.book-mini p {
+  color: var(--sepia);
+}
+
+.book-plates {
+  margin-top: clamp(5rem, 10vw, 8rem);
+}
+
+.quote-plate {
+  position: relative;
+  min-height: 27rem;
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
+.quote-image {
+  position: absolute;
+  inset: 0 0 0 24%;
+  height: 100%;
+}
+
+.quote-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(.5) brightness(.73) contrast(1.1);
+}
+
+.quote-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(68%, 40rem);
+  min-height: 20rem;
+  padding: clamp(1.7rem, 5vw, 4rem);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+
+.quote-box blockquote {
+  margin: 0 0 1rem;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-style: italic;
+  line-height: 1.16;
+}
+
+.quote-box cite {
+  color: var(--sepia);
+  font-size: 1rem;
+}
+
+.plates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem 1.7rem;
+}
+
+.plate-card {
+  margin: 0;
+}
+
+.plate-card img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.media-year {
+  margin-top: 3.8rem;
+}
+
+.media-year h2 {
+  margin-bottom: 1.1rem;
+  color: var(--ember);
+}
+
+.media-list {
+  border-top: 1px solid var(--rule);
+}
+
+.media-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.media-entry strong {
+  display: block;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+  font-weight: 400;
+}
+
+.media-link {
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link-status {
+  display: block;
+  margin-top: .2rem;
+  color: var(--ember);
+  font-size: .6rem;
+  letter-spacing: .04em;
+  text-align: right;
+}
+
+.archive-empty {
+  max-width: 42rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--rule);
+  color: var(--sepia);
+}
+
+.home-shelf {
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
+.shelf-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.shelf-card {
+  height: 100%;
+}
+
+.shelf-card h3 {
+  margin-bottom: .55rem;
+}
+
+.shelf-card h3 a {
+  text-decoration: none;
+}
+
+.shelf-card p:last-child {
+  margin-bottom: 0;
+  color: var(--sepia);
+}
+
+.archive-shelves {
+  display: grid;
+  gap: clamp(4rem, 8vw, 7rem);
+}
+
+.archive-shelf .section-head {
+  margin-bottom: 1.2rem;
+}
+
+.archive-essay-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+  list-style: none;
+}
+
+.archive-essay-list li {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.archive-number {
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.archive-essay-list h3 {
+  margin: 0 0 .3rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+}
+
+.archive-essay-list p {
+  margin: 0;
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+
+.archive-essay-list a {
+  text-decoration: none;
+}
+
+.shelf-note-inline {
+  display: block;
+  margin-top: .2rem;
+  color: var(--sepia);
+  font-size: 1rem;
+}
+
+.book-next,
+.book-conversation {
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
+.book-conversation .section-head {
+  max-width: 50rem;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  .reading-room-grid,
+  .book-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .book-hero-image {
+    max-width: 30rem;
+  }
+
+  .book-hero-image img {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    font-size: 18px;
+  }
+
+  .page-frame {
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+  }
+
+  .site-main {
+    padding: 3.25rem 1rem 4.5rem;
+  }
+
+  .site-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 15vw, 4.3rem);
+  }
+
+  .domain-question {
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+  }
+
+  .domain-index-row {
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+  }
+
+  .domain-question small {
+    font-size: .96rem;
+  }
+
+  .home-plate {
+    max-width: 18rem;
+  }
+
+  .writing-row,
+  .published-link {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+  }
+
+  .writing-row .date {
+    order: -1;
+  }
+
+  .excerpt-card {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: .8rem;
+  }
+
+  .follow-grid,
+  .book-triad,
+  .plates-grid,
+  .shelf-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .about-plate {
+    width: min(15rem, 82%);
+  }
+
+  .media-entry {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .media-link {
+    justify-self: start;
+  }
+
+  .link-status {
+    text-align: left;
+  }
+
+  .now-item {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+  }
+
+  .archive-essay-list li {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .now-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .55rem;
+  }
+
+  .quote-plate {
+    min-height: 31rem;
+  }
+
+  .quote-image {
+    inset: 0;
+  }
+
+  .quote-box {
+    width: 93%;
+    min-height: 19rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.thesis-quiet { font-size: 1.15rem; color: var(--ink); margin: .2rem 0 1.2rem; }
+
+.opening-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 340px); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.opening-portrait { margin: 4.5rem 0 0; padding: 8px; background: var(--paper-dark); border: 1px solid var(--rule); outline: 1px solid var(--rule); outline-offset: 6px; }
+.opening-portrait img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); filter: sepia(.35) contrast(1.02); }
+@media (max-width: 820px) { .opening-grid { grid-template-columns: 1fr; } .opening-portrait { max-width: 320px; margin-top: 1rem; } }
+
+.opening.opening-grid { max-width: none; width: 100%; }
+.opening-grid .opening-copy { max-width: 680px; }
+.opening-grid h1 { max-width: none; }
+
+/* Spoken appearance shelves */
+.media-entry {
+  grid-template-columns: 7rem minmax(0, 1fr) max-content max-content;
+  align-items: start;
+  gap: 1.1rem;
+  padding: 1.15rem 0;
+}
+
+.media-date {
+  padding-top: .18rem;
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .7rem;
+  letter-spacing: .04em;
+  line-height: 1.3;
+}
+
+.media-details {
+  min-width: 0;
+}
+
+.media-details strong {
+  margin-top: .28rem;
+}
+
+.media-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .66rem;
+  letter-spacing: .04em;
+  line-height: 1.35;
+  text-transform: lowercase;
+}
+
+.media-show {
+  color: var(--ink);
+}
+
+.media-episode::before {
+  content: '· ';
+  color: var(--ember);
+}
+
+.media-kind {
+  max-width: 11rem;
+  padding: .24rem .42rem .18rem;
+  border: 1px solid var(--rule);
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .62rem;
+  letter-spacing: .04em;
+  line-height: 1.25;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.featured-series {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  margin-top: -1rem;
+}
+
+.featured-block {
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  border: 1px solid var(--rule);
+  background: rgba(229, 216, 188, .42);
+}
+
+.featured-header {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-index {
+  margin: 0;
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  font-style: italic;
+  line-height: .8;
+}
+
+.featured-header .kicker {
+  margin-bottom: .35rem;
+  color: var(--ember);
+}
+
+.featured-header h2 {
+  margin: 0;
+}
+
+.featured-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(11rem, 15rem);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.featured-intro {
+  max-width: 62ch;
+  margin-bottom: 1.35rem;
+  color: var(--sepia);
+}
+
+.featured-photo {
+  display: grid;
+  min-height: 15rem;
+  margin: 0;
+  place-items: center;
+  background: var(--paper);
+  text-align: center;
+}
+
+.featured-photo figcaption {
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+}
+
+.featured-block .media-entry {
+  padding: .85rem 0;
+}
+
+.featured-block .media-entry strong {
+  font-size: clamp(1.12rem, 2vw, 1.55rem);
+}
+
+@media (max-width: 900px) {
+  .media-entry {
+    grid-template-columns: 6.5rem minmax(0, 1fr) max-content;
+  }
+
+  .media-kind {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .media-link {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 680px) {
+  .media-entry {
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+
+  .media-date,
+  .media-kind,
+  .media-link {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .media-kind {
+    max-width: none;
+    text-align: left;
+  }
+
+  .featured-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-photo {
+    min-height: 8rem;
+  }
+
+  .featured-header {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+    gap: .8rem;
+  }
+}
+
+/* Domain arc synthesis */
+.draft-banner {
+  margin: 0 0 clamp(2rem, 5vw, 3.5rem);
+  padding: .7rem .9rem;
+  border: 1px solid var(--rule);
+  color: var(--ember);
+  background: rgba(229, 216, 188, .34);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+}
+
+.domain-page-main {
+  max-width: 74rem;
+  margin: 0 auto;
+}
+
+.domain-hero {
+  max-width: 64rem;
+  margin-bottom: clamp(4.5rem, 9vw, 8rem);
+}
+
+.domain-hero h1 {
+  max-width: 13ch;
+  margin-bottom: .8rem;
+}
+
+.domain-page-question {
+  max-width: 38ch;
+  margin-bottom: 1.25rem;
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.5rem);
+  font-style: italic;
+  line-height: 1.18;
+}
+
+.domain-origin {
+  max-width: 64ch;
+  margin-bottom: 0;
+}
+
+.domain-section {
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
+.essay-section {
+  margin-top: 0;
+}
+
+.essay-section .section-head,
+.thinkers-section .section-head,
+.shelf-section .section-head,
+.reading-section .section-head {
+  max-width: 52rem;
+}
+
+.essay-section .section-head h2 {
+  max-width: 24ch;
+}
+
+.thinkers-list {
+  max-width: var(--reading);
+}
+
+.longform-body h3 {
+  margin-top: 2.8rem;
+  color: var(--ember);
+}
+
+.thinkers-list p strong {
+  font-family: "IM Fell English", Georgia, serif;
+  font-size: 1.18em;
+  font-weight: 400;
+}
+
+.shelf-groups {
+  display: grid;
+  gap: 2.8rem;
+  border-top: 1px solid var(--rule);
+}
+
+.shelf-group {
+  padding-top: 1.3rem;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.shelf-group h3 {
+  margin: 0 0 .8rem;
+  color: var(--ember);
+  font-size: 1.45rem;
+}
+
+.shelf-title-list,
+.reading-list {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.shelf-title-list li,
+.reading-list li {
+  padding: .65rem 0 .7rem .35rem;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.shelf-title-list li:last-child,
+.reading-list li:last-child {
+  border-bottom: 0;
+}
+
+.shelf-title-list a {
+  text-decoration: none;
+}
+
+.shelf-tag {
+  display: inline-block;
+  margin-left: .45rem;
+  color: var(--sepia);
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: .65rem;
+  letter-spacing: .06em;
+  text-transform: lowercase;
+}
+
+.reading-list {
+  max-width: var(--reading);
+  border-top: 1px solid var(--rule);
+  padding-top: .5rem;
+}
+
+.arc-row {
+  grid-template-columns: 5rem minmax(0, 1fr) auto;
+}
+
+.arc-station-copy strong,
+.arc-station-copy small,
+.station-question {
+  display: block;
+}
+
+.station-question {
+  max-width: 58ch;
+  margin: .2rem 0 .15rem;
+  color: var(--ink);
+}
+
+.arc-station-copy small {
+  max-width: 64ch;
+  color: var(--sepia);
+}
+
+.arc-closing {
+  margin: 2.4rem 0 0;
+  color: var(--ember);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  font-style: italic;
+}
+
+.station-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: clamp(5rem, 10vw, 8rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.station-nav-link {
+  display: block;
+  min-width: 0;
+  padding: .9rem 0;
+  text-decoration: none;
+}
+
+.station-nav-link strong {
+  display: block;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.station-nav-index {
+  text-align: center;
+}
+
+.station-nav-next {
+  text-align: right;
+}
+
+@media (max-width: 680px) {
+  .arc-row,
+  .station-nav {
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+  }
+
+  .arc-row > span:last-child {
+    display: none;
+  }
+
+  .station-nav-index,
+  .station-nav-next {
+    text-align: left;
+  }
+
+  .station-nav-index {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .station-nav-next {
+    grid-column: 2;
+  }
+}
+.featured-photo img{display:block;width:100%;height:auto;border:1px solid var(--rule);filter:sepia(.25) contrast(1.02)}
+
+/* wrap fix 2026-11-20: titles were capped at 12ch, forcing word-per-line breaks on desktop */
+h1, h2, h3, .media-details strong, .rk-ep strong { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.page-intro h1, .opening h1, .essay-title-block h1 { max-width: 20ch; }
+.book-hero-copy h1 { max-width: 16ch; }
+.essay-title-block h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; }
+.featured-entry .media-entry, .media-entry { grid-template-columns: 6.5rem minmax(0, 1fr) auto auto; }
+.media-details strong { font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.3; }
+.page-intro.intro-grid { max-width: none; display: grid; grid-template-columns: minmax(0,1fr) minmax(240px,360px); gap: clamp(2rem,5vw,4rem); align-items: center; }
+.intro-feature { margin: 0; padding: 8px; background: var(--paper-dark); border: 1px solid var(--rule); outline: 1px solid var(--rule); outline-offset: 6px; }
+.intro-feature img { display:block; width:100%; height:auto; border:1px solid var(--rule); filter: sepia(.3) contrast(1.02); transition: filter .3s; }
+.intro-feature a:hover img { filter: none; }
+.intro-feature figcaption { font-family:'Courier Prime',monospace; font-size:.7rem; letter-spacing:.04em; color: var(--sepia); text-align:center; margin-top:.7rem; }
+@media (max-width: 820px) { .page-intro.intro-grid { grid-template-columns: 1fr; } .intro-feature { max-width: 360px; } }
+.intro-grid h1 { max-width: none; font-size: clamp(2.6rem, 5.2vw, 4.6rem); line-height: 1.02; }
+.page-intro.intro-grid { grid-template-columns: minmax(0,1fr) minmax(420px,620px); }
+.intro-features { display:grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+@media (max-width: 1000px) { .page-intro.intro-grid { grid-template-columns: 1fr; } .intro-features { max-width: 620px; } }
+@media (max-width: 520px) { .intro-features { grid-template-columns: 1fr; } }
+.page-intro.intro-grid { grid-template-columns: minmax(0,1.15fr) minmax(360,500px); grid-template-columns: minmax(0,1.15fr) minmax(360px,500px); }
+.intro-grid h1 { font-size: clamp(2.4rem, 4.2vw, 3.9rem); }
+.chapter-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0 2.5rem}
+.chapter-list a{display:flex;gap:1rem;align-items:baseline;padding:.85rem 0;border-bottom:1px dotted var(--rule);text-decoration:none;color:var(--ink)}
+.chapter-list a:hover .ch-t{color:var(--ember)}
+.ch-n{font-family:'Courier Prime',monospace;font-size:.75rem;color:var(--ember)}
+.ch-t{font-family:'IM Fell English',serif;font-size:1.2rem;line-height:1.25}
+.book-chapters{margin:4rem 0}
+.chapter-buy{max-width:46rem;margin:3rem auto;padding:2rem;background:var(--paper-dark);border:1px solid var(--rule);outline:1px solid var(--rule);outline-offset:6px}
+.chapter-buy h2{margin:.3rem 0 1.2rem}
+.chapter-buy-row{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;align-items:start}
+.chapter-buy-row img{width:100%;border:1px solid var(--rule)}
+.chapter-nav{max-width:46rem;margin:2rem auto 4rem;display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:.85rem}
+@media (max-width:520px){.chapter-buy-row{grid-template-columns:1fr}.chapter-buy-row img{max-width:140px}}
+.book-side .book-hero-image { min-height: 0; }
+.book-side .book-hero-image img { height: auto; min-height: 0; }
+.book-side { align-self: start; }
+.book-cover { display:block; width:100%; height:auto; margin-top:1.25rem; }
+.book-hero-copy h1 { font-size: clamp(2.4rem, 4.6vw, 4.2rem); overflow-wrap: anywhere; }
+.book-hero-copy h1 { font-size: clamp(2rem, 3.6vw, 3.3rem); overflow-wrap: normal; max-width: none; }
+/* ---- book page rebuild (2026-11-21) ---- */
+.bk { max-width: 68rem; margin: 0 auto; padding: 0 16px; }
+.bk section { margin: 0 0 6rem; }
+.bk h2 { font-family:'IM Fell English',serif; font-size: clamp(1.8rem,3vw,2.5rem); line-height:1.15; margin:.4rem 0 1.5rem; }
+.bk-kicker { font-family:'Courier Prime',monospace; font-size:.75rem; letter-spacing:.14em; text-transform:lowercase; color:var(--ember); margin:0; }
+.bk-hero { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,4fr); gap:4rem; align-items:center; padding-top:4rem; }
+.bk-hero h1 { font-family:'IM Fell English',serif; font-size:clamp(2.6rem,5.4vw,4.5rem); line-height:1; margin:.6rem 0 .6rem; max-width:none; }
+.bk-sub { font-style:italic; color:var(--sepia); font-size:1.3rem; margin:0 0 1.6rem; }
+.bk-pitch { font-size:1.2rem; line-height:1.55; max-width:34rem; margin:0 0 2rem; }
+.bk-hero-cover { display:flex; justify-content:center; }
+.bk-hero-cover img { width:100%; max-width:340px; height:auto; box-shadow:0 18px 40px rgba(42,33,24,.25); }
+.bk-buttons { display:flex; flex-wrap:wrap; gap:.75rem; }
+.bk-center { justify-content:center; margin-top:2.5rem; }
+.bk-btn { display:inline-flex; align-items:center; min-height:44px; padding:.9rem 1.4rem; font-family:'Courier Prime',monospace; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; color:var(--ink); border:1px solid var(--ink); }
+.bk-btn-primary { background:var(--ember); border-color:var(--ember); color:var(--paper); }
+.bk-btn:hover { opacity:.85; }
+.bk-hero-blurb { margin:1.6rem 0 0; font-style:italic; color:var(--sepia); }
+.bk-hero-blurb span { font-style:normal; font-family:'Courier Prime',monospace; font-size:.75rem; letter-spacing:.08em; margin-left:.5rem; }
+.bk-praise { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:2.5rem 0; }
+.bk-praise-item { margin:0; padding:0 2rem; }
+.bk-praise-item + .bk-praise-item { border-left:1px solid var(--rule); }
+.bk-praise-item blockquote { margin:0 0 1rem; font-style:italic; font-size:1.1rem; line-height:1.5; border:0; padding:0; }
+.bk-praise-item figcaption { font-family:'Courier Prime',monospace; font-size:.72rem; letter-spacing:.08em; color:var(--sepia); }
+.bk-argues, .bk-toc, .bk-listen, .bk-convo { max-width:44rem; margin-left:auto !important; margin-right:auto !important; }
+.bk-argues p:not(.bk-kicker) { font-size:1.15rem; line-height:1.6; }
+.bk-band { margin:0 0 6rem; height:220px; overflow:hidden; }
+.bk-band img { width:100%; height:100%; object-fit:cover; object-position:center 30%; opacity:.45; filter:sepia(.4); mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent); -webkit-mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent); }
+.bk-toc ol { list-style:none; margin:0; padding:0; }
+.bk-toc li a { display:flex; align-items:baseline; gap:1rem; padding:.7rem 0; text-decoration:none; color:var(--ink); }
+.toc-n { font-family:'Courier Prime',monospace; font-size:.8rem; color:var(--ember); width:2.6rem; flex:none; }
+.toc-t { font-size:1.15rem; }
+.toc-dots { flex:1; border-bottom:1px dotted var(--rule); transform:translateY(-.3em); min-width:1rem; }
+.toc-r { font-family:'Courier Prime',monospace; font-size:.7rem; letter-spacing:.08em; color:var(--sepia); }
+.bk-toc li a:hover .toc-t { color:var(--ember); }
+.bk-embed { position:relative; aspect-ratio:16/9; }
+.bk-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.bk-close { text-align:center; padding-top:2.5rem; border-top:1px solid var(--rule); }
+.bk-close img { width:120px; height:auto; box-shadow:0 10px 24px rgba(42,33,24,.2); }
+.bk-close-line { font-size:1.4rem; margin:1.5rem 0 0; }
+@media (max-width:760px) {
+  .bk section { margin-bottom:4rem; }
+  .bk-hero { grid-template-columns:1fr; gap:2rem; padding-top:2rem; }
+  .bk-hero-cover { order:-1; } .bk-hero-cover img { width:60vw; max-width:260px; }
+  .bk-buttons { flex-direction:column; } .bk-btn { justify-content:center; }
+  .bk-praise { grid-template-columns:1fr; gap:2rem; }
+  .bk-praise-item { padding:0; } .bk-praise-item + .bk-praise-item { border-left:0; border-top:1px solid var(--rule); padding-top:2rem; }
+  .toc-dots, .toc-r { display:none; }
+}
+.chapter-buy { background:none; border:0; outline:0; border-top:1px solid var(--rule); padding:2.5rem 0 0; max-width:36rem; }
+.full-essay.longform-body { max-width:36rem; }
+.chapter-nav { max-width:36rem; gap:1rem; } .chapter-nav a { max-width:45%; }
+.essay-title-block:has(+ .full-essay), .full-essay.longform-body, .chapter-buy, .chapter-nav { max-width:36rem; margin-left:auto; margin-right:auto; padding-left:0; padding-right:0; }
+.chapter-nav { display:grid; grid-template-columns:1fr auto 1fr; gap:1.5rem; align-items:start; }
+.chapter-nav a { max-width:none; } .chapter-nav > :last-child { text-align:right; } .chapter-nav > :nth-child(2) { text-align:center; }
+.chapter-buy h2 { font-size:clamp(1.6rem,3vw,2.2rem); }
+
+/* press */
+.press{margin:3rem 0 3.5rem}
+.press h2{font-family:"IM Fell English",serif;font-size:2rem;margin:.2rem 0 1.2rem}
+.press-features{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.press-card{display:flex;flex-direction:column;gap:.6rem;padding:1.6rem 1.8rem;border:1px solid var(--rule,#a8916a);background:#e5d8bc;color:#2a2118;text-decoration:none}
+.press-card:hover{border-color:#d96a57}
+.press-outlet{font-family:"Courier Prime",monospace;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;color:#d96a57}
+.press-card strong{font-family:"IM Fell English",serif;font-size:1.5rem;line-height:1.2;font-weight:400}
+.press-date{font-family:"Courier Prime",monospace;font-size:.85rem;color:#6b5638}
+.press-list{list-style:none;padding:0;margin:1.5rem 0 0}
+.press-list li{padding:.55rem 0;border-bottom:1px dotted #a8916a}
+.press-list span{font-family:"Courier Prime",monospace;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#6b5638;margin-right:.6rem}
+.press-list a{color:#2a2118}
+.press-list em{color:#6b5638;font-size:.9rem;margin-left:.4rem}
+@media (max-width:760px){.press-features{grid-template-columns:1fr}}
+
+/* text wraps beside images on desktop */
+@media (min-width:761px){
+  .about-plate{float:left;width:16rem;margin:.3rem 2.6rem 1.6rem 0}
+  .about-content hr,.about-content h2,.about-content .follow-block{clear:both}
+  .about-content::after{content:"";display:block;clear:both}
+}
+.press-features{grid-template-columns:repeat(3,1fr)}
+@media (max-width:760px){.press-features{grid-template-columns:1fr}}
+.press-quote{margin:0 0 2rem;padding:1.8rem 2.2rem;border-left:4px solid #d96a57;background:#e5d8bc}
+.press-quote p{font-family:"EB Garamond",serif;font-size:1.35rem;line-height:1.55;font-style:italic;margin:0 0 1rem;color:#2a2118}
+.press-quote cite{font-family:"Courier Prime",monospace;font-style:normal;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.press-quote cite a{color:#d96a57}
+.home-antiwar{margin:4rem 0}
+.home-antiwar h2{font-family:"IM Fell English",serif;font-size:2.4rem;margin:.2rem 0 1.4rem}
+.home-antiwar-links{display:flex;flex-wrap:wrap;gap:1.6rem;font-family:"Courier Prime",monospace;font-size:.9rem}
+.home-antiwar-links a{color:#d96a57}
+.home-vora{border-left:3px solid #d96a57;padding-left:1rem;font-size:1.1em}
+.home-vora a{color:#d96a57}
+.antiwar-clip{margin:0 0 1.6rem}
+.antiwar-clip video{width:100%;display:block;border:1px solid #a8916a;background:#000}
+.antiwar-clip figcaption{font-family:"Courier Prime",monospace;font-size:.8rem;color:#6b5638;margin-top:.5rem}
+/* home: side column clip + book section (2026-11-23) */
+.opening-side{display:flex;flex-direction:column;gap:1.4rem}
+.opening-clip video{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#2a2118}
+.opening-clip figcaption{font-family:'Courier Prime',monospace;font-size:.7rem;letter-spacing:.06em;color:#6b5638;margin-top:.5rem;text-align:center}
+.home-book{display:grid;grid-template-columns:15rem 1fr;gap:2.6rem;align-items:start;margin:4rem 0;padding:2.4rem;background:#e5d8bc;border:1px solid #a8916a}
+.home-book-cover img{width:100%;display:block;box-shadow:0 8px 24px rgba(42,33,24,.35)}
+.home-book h2{font-size:2.6rem;margin:.2rem 0 0}
+.home-book-sub{font-style:italic;color:#6b5638;margin:.2rem 0 1.4rem}
+.home-book-quote{margin:0 0 1.4rem;padding-left:1.2rem;border-left:4px solid #d96a57}
+.home-book-quote p{font-family:'IM Fell English',serif;font-size:1.55rem;line-height:1.35;margin:0 0 .5rem}
+.home-book-quote cite{font-family:'Courier Prime',monospace;font-size:.75rem;font-style:normal;color:#6b5638}
+.home-book-buy{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:1.4rem}
+.buy-btn{background:#d96a57;color:#fff;padding:.6rem 1.1rem;text-decoration:none;font-family:'Courier Prime',monospace;font-size:.85rem}
+.buy-btn.alt{background:#2a2118}
+@media (max-width:760px){.home-book{grid-template-columns:1fr;padding:1.4rem}.home-book-cover{max-width:12rem}}
+.news-hero{margin:0 0 3rem}.news-hero img{width:100%;display:block;border:1px solid #a8916a}
+.news-hero figcaption{font-family:'Courier Prime',monospace;font-size:.75rem;color:#6b5638;margin-top:.6rem}
+.news-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-bottom:2rem}
+.news-split .news-hero{margin:0}.news-split .press-quote{margin:0;font-size:1.1rem}
+@media (max-width:760px){.news-split{grid-template-columns:1fr}}
+.news-split{align-items:stretch;gap:0;border:1px solid #a8916a;background:#e5d8bc}
+.news-split .news-hero{display:flex;flex-direction:column}
+.news-split .news-hero img{flex:1;height:100%;object-fit:cover;border:0}
+.news-split .news-hero figcaption{padding:.5rem .8rem;margin:0}
+.news-split .press-quote{border-left:4px solid #d96a57;padding:1.6rem 1.8rem;font-size:1rem;line-height:1.5;display:flex;flex-direction:column;justify-content:center}
+
+/* 2026-11-23 Erik's v4 note: less space at the head of About */
+.about-main { padding-top: clamp(2rem, 4vw, 3rem); }
+.about-intro { margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+
+/* 2026-11-23 Erik: caption under the owl */
+.about-plate figcaption { margin-top: .55rem; color: var(--sepia); font-family: 'Courier Prime', 'Courier New', monospace; font-size: .72rem; letter-spacing: .06em; text-align: center; }
+
+/* 2026-11-23 SEO: the book's colophon line */
+.bk-facts { margin: 1.1rem 0 0; color: var(--sepia); font-family: 'Courier Prime', 'Courier New', monospace; font-size: .72rem; letter-spacing: .06em; }
